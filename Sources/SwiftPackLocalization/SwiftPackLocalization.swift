@@ -27,10 +27,12 @@ public class LanguageManager {
     private init() {}
 }
 
-func L(_ key: String, _ language: String) -> String {
+func L(_ key: String) -> String {
+    let language = LanguageManager.shared.language
     let path = Bundle.module.path(forResource: language, ofType: "lproj")
     let bundle = Bundle(path: path!)
-    return bundle!.localizedString(forKey: "ERR_MESSAGE_CONNECTION_LOST", value: nil, table: nil)
+    return bundle!.localizedString(
+        forKey: "ERR_MESSAGE_CONNECTION_LOST", value: nil, table: nil)
 }
 
 public class ErrorFactory {
@@ -46,11 +48,11 @@ public class ErrorFactory {
         var message: String
         switch code {
         case 1:
-            message = L("ERR_MESSAGE_CONNECTION_LOST", language)
+            message = L("ERR_MESSAGE_CONNECTION_LOST")
         case 2:
-            message = L("ERR_MESSAGE_TRNASACTION_FAILED", language)
+            message = L("ERR_MESSAGE_TRNASACTION_FAILED")
         default:
-            message = L("ERR_MESSAGE_UNKNOWN", language)
+            message = L("ERR_MESSAGE_UNKNOWN")
         }
 
         return CustomError(code, message)

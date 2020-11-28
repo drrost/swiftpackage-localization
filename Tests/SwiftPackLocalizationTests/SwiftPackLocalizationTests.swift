@@ -38,5 +38,4 @@ final class SwiftPackLocalizationTests: XCTestCase {
         XCTAssertEqual(1, error.code)
         XCTAssertEqual("Connexion perdue", error.message)
     }
-
 }
