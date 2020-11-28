@@ -1,0 +1,4 @@
+
+"ERR_MESSAGE_CONNECTION_LOST" = "Connexion perdue";
+"ERR_MESSAGE_TRNASACTION_FAILED" = "La transaction a échoué";
+"ERR_MESSAGE_UNKNOWN" = "Erreur inconnue";

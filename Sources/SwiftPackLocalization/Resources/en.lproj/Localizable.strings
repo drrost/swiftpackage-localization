@@ -1,0 +1,5 @@
+
+"ERR_MESSAGE_CONNECTION_LOST" = "Connection lost";
+"ERR_MESSAGE_TRNASACTION_FAILED" = "Transaction failed";
+"ERR_MESSAGE_UNKNOWN" = "Unknown error";
+
