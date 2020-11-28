@@ -37,11 +37,7 @@ func L(_ key: String) -> String {
 
 public class ErrorFactory {
 
-    let language: String
-
-    public init() {
-        self.language = LanguageManager.shared.language
-    }
+    public init() {}
 
     func error(for code: Int) -> CustomError {
 
